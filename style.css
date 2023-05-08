@@ -121,3 +121,25 @@ input[type='number'] {
     text-decoration: none;
   }
 }
+
+pre {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding: 0.5rem 1rem 0.3rem;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+  white-space: pre-wrap;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
+  align-items: flex-start;
+  display: flex;
+}
+
+code {
+  font-family: 'PT Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: inline-block;
+  color: #333333;
+}
