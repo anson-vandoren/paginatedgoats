@@ -1,0 +1,15 @@
+[Unit]
+Description=Paginated Goats API
+After=network.target
+
+[Service]
+User=blog
+Group=blog
+WorkingDirectory=/opt/paginatedgoats
+ExecStart=/usr/bin/node /opt/paginatedgoats/index.js
+Restart=always
+RestartSec=3
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

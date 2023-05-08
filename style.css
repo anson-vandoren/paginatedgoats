@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|PT+Mono&display=swap');
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 8px;
+  min-height: calc(100% - 16px);
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+main,
+footer {
+  max-width: 90ch;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main.narrow-column {
+  max-width: 72ch;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align: center;
+}
+
+section {
+  font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+#ordinal-day {
+  text-decoration: underline;
+}
+
+a {
+  color: #435a6b;
+  text-decoration: none;
+  padding: 8px 0;
+  position: relative;
+}
+
+a:hover::after {
+  /* make underline a little further below text */
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+
+  border-width: 0 0 1px;
+  border-style: solid;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 3rem;
+  width: 40ch;
+  max-width: 100%;
+
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size: 12px;
+}
+
+#day-input {
+  font-family: 'PT Mono', monospace;
+  font-weight: 600;
+
+  width: 3ch;
+
+  font-size: 2.5rem;
+  text-align: center;
+  text-decoration: underline;
+
+  background-color: transparent;
+
+  height: 2.5rem;
+  border: 0px solid;
+  outline: none;
+
+  padding: 0;
+  margin: 0;
+
+  appearance: none;
+  vertical-align: center;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+#underlined {
+  font-size: 2.5rem;
+  text-decoration: underline;
+
+  padding: 0;
+  margin: 0;
+}
+
+@-moz-document url-prefix() {
+  /* Fix stupid Firefox underline inconsistency */
+  #underlined {
+    text-decoration: none;
+  }
+}
